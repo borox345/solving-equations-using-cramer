@@ -33,9 +33,13 @@ def cramer_formulas(a1, b1, c1, a2, b2, c2):
 #   print("Equations are parallel.")
 
 if __name__ == "__main__":
-  input = get_equations()
-  solution = cramer_formulas(*input[0], *input[1])
-  if solution:
-    print("x =", solution[0], ", y =", solution[1])
-  else:
-    print("Equations are parallel.")
+  option = input("Option 1/2: ")
+  if option == 1:
+    input = get_equations()
+    solution = cramer_formulas(*input[0], *input[1])
+    if solution:
+      print("x =", solution[0], ", y =", solution[1])
+    else:
+      print("Equations are parallel.")
+  elif option == 2:
+    print("s")
